@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>明江的产品们</title>
+<style>
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --text: #e0e0e0;
+    --sub: #888;
+    --border: #2a2a2a;
+    --accent: #f0b90b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 480px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    margin: 30px 0 30px;
+  }
+  .header h1 { font-size: 1.5rem; font-weight: 700; }
+  .header p { color: var(--sub); font-size: 0.9rem; margin-top: 6px; }
+
+  .product-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--accent); }
+
+  .card .name { font-size: 1.1rem; font-weight: 600; }
+  .card .desc { font-size: 0.85rem; color: var(--sub); margin-top: 4px; }
+  .card .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: rgba(240,185,11,0.15);
+    color: var(--accent);
+  }
+  .card .bottom {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card .links {
+    font-size: 0.8rem;
+    color: var(--sub);
+  }
+  .card .links a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card .links a:hover { text-decoration: underline; }
+  .card .links .sep {
+    color: var(--border);
+    margin: 0 6px;
+  }
+
+  .footer {
+    text-align: center;
+    color: var(--sub);
+    font-size: 0.75rem;
+    margin: 30px 0;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>🛠 明江的产品们</h1>
+    <p>一个人 + AI · 从0到1亲手打磨</p>
+  </div>
+
+  <div class="product-list">
+
+    <a class="card" href="https://dzrsmj.github.io/chupian/">
+      <div class="name">🎬 出片·文字变卡片</div>
+      <div class="desc">选中网页文字，一键生成精美分享卡片。支持公众号贴图和小红书卡片模板。</div>
+      <span class="tag">网页工具</span>
+    </a>
+
+    <div class="card">
+      <div class="name">📖 AI阅读助手</div>
+      <div class="desc">选中文字一键翻译、总结、朗读。支持OpenAI/Claude/DeepSeek。</div>
+      <div class="bottom">
+        <span class="tag">浏览器插件</span>
+        <span class="links">
+          <a href="https://chromewebstore.google.com/detail/ai-reading-assistant/ihffmegdfhandndcbfgfcpadmagmmloh" target="_blank">Chrome版</a>
+          <span class="sep">|</span>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/ai-reading-assistant/niekkmhademompnabhmpjphboaejhpkm" target="_blank">Edge版</a>
+        </span>
+      </div>
+    </div>
+
+    <a class="card" href="https://dzrsmj.github.io/wage-calculator/">
+      <div class="name">🧮 工资计算器</div>
+      <div class="desc">输入月薪，实时看看每秒钟、每分钟赚多少钱。</div>
+      <span class="tag">网页工具</span>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    Built with AI · <a href="https://mp.weixin.qq.com/s/你的文章链接">公众号 DT成长空间</a>
+  </div>
+
+</div>
+</body>
+</html>
